@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MiAmigaDAO.Inteface
 {
-    internal interface ISupervisor :IBase<Supervisor>
+    internal interface IPerson : IBase<Persona>
     {
-        Supervisor Get(byte id);
+        Persona Get(byte id);
     }
 }

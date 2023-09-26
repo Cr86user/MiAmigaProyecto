@@ -12,7 +12,7 @@ namespace MiAmigaDAO.Implementacion
     {
         public class BaseImpl
         {
-            string connectionString = @"Server=Lopezito\SQLEXPRESS;Database=bdAndreaTours1;User Id=sa;Password=Univalle;";
+            string connectionString = @"Server=Lopezito\SQLEXPRESS;Database=bdMiAmiga;User Id=sa;Password=Univalle;";
             internal string query = "";
             public string GetGenerateIDTable(string table)
             {

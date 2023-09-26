@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace MiAmigaDAO.Implementacion
 {
-    public class SupervisorImpl : BaseModel, ISupervisor
+    public class PersonaImpl : BaseImplcs, IPerson
     {
-        public int Delete(Supervisor t)
+        public int Delete(Persona t)
         {
             throw new NotImplementedException();
         }
 
-        public Supervisor Get(byte id)
+        public Persona Get(byte id)
         {
             throw new NotImplementedException();
         }
 
-        public int Insert(Supervisor t)
+        public int Insert(Persona t)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace MiAmigaDAO.Implementacion
             throw new NotImplementedException();
         }
 
-        public int Update(Supervisor t)
+        public int Update(Persona t)
         {
             throw new NotImplementedException();
         }
