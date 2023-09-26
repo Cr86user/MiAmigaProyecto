@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MiAmigaDAO.Inteface
 {
-    internal interface IBase<T>
+    internal interface ISupervisor :IBase
     {
-        int Delete(T t);
-        int Insert(T t);
-        int Update(T t);
-        DataTable Select();
 
     }
 }
