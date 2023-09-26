@@ -10,8 +10,6 @@ namespace MiAmigaDAO.Implementacion
 {
     public class BaseImplcs
     {
-        public class BaseImpl
-        {
             string connectionString = @"Server=Lopezito\SQLEXPRESS;Database=bdMiAmiga;User Id=sa;Password=Univalle;";
             internal string query = "";
             public string GetGenerateIDTable(string table)
@@ -119,6 +117,6 @@ namespace MiAmigaDAO.Implementacion
                 }
                 return table;
             }
-        }
-    }
+        
+    } 
 }

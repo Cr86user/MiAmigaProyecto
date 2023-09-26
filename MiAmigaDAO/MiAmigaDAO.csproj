@@ -42,13 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementacion\BaseImplcs.cs" />
+    <Compile Include="Implementacion\CasoImpl.cs" />
     <Compile Include="Implementacion\PersonaImpl.cs" />
     <Compile Include="Implementacion\SupervisorImpl.cs" />
     <Compile Include="Inteface\IBase.cs" />
+    <Compile Include="Inteface\ICaso.cs" />
     <Compile Include="Inteface\IPerson.cs" />
     <Compile Include="Inteface\ISupervisor.cs" />
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Caso.cs" />
     <Compile Include="Model\Persona.cs" />
+    <Compile Include="Model\SessionClass.cs" />
     <Compile Include="Model\Supervisor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -26,7 +26,7 @@ namespace MiAmigaDAO.Implementacion
             throw new NotImplementedException();
         }
 
-        public DataTable Select()
+        public DataTable Select()                                 
         {
             throw new NotImplementedException();
         }
