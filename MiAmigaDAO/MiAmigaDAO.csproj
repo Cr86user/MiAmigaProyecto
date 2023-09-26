@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementacion\BaseImplcs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implementacion\" />
     <Folder Include="Inteface\" />
     <Folder Include="Model\" />
   </ItemGroup>
