@@ -8,5 +8,6 @@ namespace MiAmigaDAO.Inteface
 {
     internal interface IBase
     {
+
     }
 }

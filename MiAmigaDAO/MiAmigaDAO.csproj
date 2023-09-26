@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementacion\BaseImplcs.cs" />
+    <Compile Include="Implementacion\SupervisorImpl.cs" />
     <Compile Include="Inteface\IBase.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

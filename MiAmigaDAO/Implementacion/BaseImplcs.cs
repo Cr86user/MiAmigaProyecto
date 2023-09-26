@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MiAmigaDAO.Implementacion
 {
-    internal class BaseImplcs
+    public class BaseImplcs
     {
+
     }
 }
