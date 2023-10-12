@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MiAmigaDAO.Implementacion
 {
-    public class BaseImplcs
+    public class BaseImpl
     {
             string connectionString = @"Server=Lopezito\SQLEXPRESS;Database=bdMiAmiga;User Id=sa;Password=Univalle;";
             internal string query = "";
@@ -23,7 +23,6 @@ namespace MiAmigaDAO.Implementacion
                 }
                 catch (Exception ex)
                 {
-
                     throw ex;
                 }
                 finally
@@ -50,8 +49,24 @@ namespace MiAmigaDAO.Implementacion
 
                 return commands;
             }
+        public List<SqlCommand> Create3BasicCommand(string sql1, string sql2, string sql3)
+        {
+            List<SqlCommand> commands = new List<SqlCommand>();
+            SqlConnection connection = new SqlConnection(connectionString);
 
-            public int ExecuteBasicCommand(SqlCommand command)
+            SqlCommand command1 = new SqlCommand(sql1, connection);
+            commands.Add(command1);
+
+            SqlCommand command2 = new SqlCommand(sql2, connection);
+            commands.Add((command2));
+
+            SqlCommand command3 = new SqlCommand(sql3, connection);
+            commands.Add((command3));
+
+            return commands;
+        }
+
+        public int ExecuteBasicCommand(SqlCommand command)
             {
                 try
                 {

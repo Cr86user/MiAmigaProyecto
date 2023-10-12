@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MiAmigaDAO.Implementacion
 {
-    public class CasoImpl : BaseImplcs, ICaso
+    public class CasoImpl : BaseImpl, ICaso
     {
         public int Delete(Caso t)
         {
@@ -42,21 +42,28 @@ namespace MiAmigaDAO.Implementacion
                 DataTable table = ExecuteDataTableCommand(command);
                 if (table.Rows.Count > 0)
                 {
-                    t = new Caso(
-                                 byte.Parse(table.Rows[0][0].ToString()),
-                                 int.Parse(table.Rows[0][1].ToString()),
-                                 table.Rows[0][2].ToString(),
-                                 byte.Parse(table.Rows[0][3].ToString()),
-                                 byte.Parse(table.Rows[0][4].ToString()),
-                                 table.Rows[0][5].ToString(),
-                                 DateTime.Parse(table.Rows[0][6].ToString()),
-                                 DateTime.Parse(table.Rows[0][7].ToString()),
-                                 DateTime.Parse(table.Rows[0][8].ToString()),
-                                 byte.Parse(table.Rows[0][9].ToString()),
-                                 byte.Parse(table.Rows[0][10].ToString()),
-                                 DateTime.Parse(table.Rows[0][11].ToString()),
-                                 DateTime.Parse(table.Rows[0][12].ToString()),
-                                 byte.Parse(table.Rows[0][13].ToString()));
+                    byte[] bytesImagen = (byte[])table.Rows[0][3]; // Obtener datos de la imagen como byte[]
+                    byte[] bytesAudio = (byte[])table.Rows[0][4]; // Obtener datos del audio como byte[]
+
+                    Caso caso = new Caso(
+                        
+                        byte.Parse(table.Rows[0][0].ToString()),
+                        int.Parse(table.Rows[0][1].ToString()),
+                        table.Rows[0][2].ToString(),
+                        bytesImagen,
+                        bytesAudio,
+                        table.Rows[0][5].ToString(),
+                        DateTime.Parse(table.Rows[0][6].ToString()),
+                        DateTime.Parse(table.Rows[0][7].ToString()),
+                        DateTime.Parse(table.Rows[0][8].ToString()),
+                        byte.Parse(table.Rows[0][9].ToString()),
+                        byte.Parse(table.Rows[0][10].ToString()),
+                        DateTime.Parse(table.Rows[0][11].ToString()),
+                        DateTime.Parse(table.Rows[0][12].ToString()),
+                        byte.Parse(table.Rows[0][13].ToString())
+                    );
+
+
                 }
             }
             catch (Exception ex)
@@ -88,19 +95,15 @@ namespace MiAmigaDAO.Implementacion
 
         public int Insert(Caso t)
         {
-            query = @"INSERT INTO Caso(nro,descripcion,imagen,audio,estadoCaso,fechaInicio,fechaCierre,fechaReapertura,idDenunciante,idSupervisor)
-                    VALUES (@nro,@descripcion,@imagen,@audio,@estadoCaso,@fechaInicio,@fechaCierre,@fechaReapertura,@idDenunciante,@idSupervisor)";
+            query = @"INSERT INTO Caso(nro,descripcion,imagen,audio,estadoCaso,idDenunciante,idSupervisor)
+                    VALUES (@nro,@descripcion,@imagen,@audio,'Abierto',@idDenunciante,@idSupervisor)";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue(@"nro", t.NumeroCaso);
             command.Parameters.AddWithValue(@"descripcion", t.Descripcion);
             command.Parameters.AddWithValue(@"imagen", t.Imagen);
-            command.Parameters.AddWithValue(@"audio", t.Audio);
-            command.Parameters.AddWithValue(@"estadoCaso", t.EstadoCaso);
-            command.Parameters.AddWithValue(@"fechaInicio", t.FechaInicio);
-            command.Parameters.AddWithValue(@"fechaCierre", t.FechaCierre);
-            command.Parameters.AddWithValue(@"fechaReapertura", t.FechaReapertura);
-            command.Parameters.AddWithValue(@"idDenunciante", 1);
-            command.Parameters.AddWithValue(@"idSupervisor", 1);
+            command.Parameters.AddWithValue(@"audio", t.Audio);          
+            command.Parameters.AddWithValue(@"idDenunciante", 2);
+            command.Parameters.AddWithValue(@"idSupervisor", 1); 
             try
             {
                 return ExecuteBasicCommand(command);
@@ -114,7 +117,7 @@ namespace MiAmigaDAO.Implementacion
 
         public DataTable Select()
         {
-            query = @"SELECT C.nro, C.descripcion, C.imagen, C.audio, C.estadoCaso, C.fechaInicio, C.fechaCierre, C.fechaReapertura, D.codDenunciante, S.codSupervisor, S.fechaRegistro, S.fechaActualizacion
+            query = @"SELECT C.id,C.nro, C.descripcion, C.imagen, C.audio, C.estadoCaso, C.fechaInicio, C.fechaCierre, C.fechaReapertura, D.codDenunciante, S.codSupervisor, S.fechaRegistro, S.fechaActualizacion
                     FROM Caso C
                     INNER JOIN Denunciante D ON D.idPersona = C.idDenunciante
                     INNER JOIN Supervisor S ON S.idPersona = C.idSupervisor
@@ -133,15 +136,14 @@ namespace MiAmigaDAO.Implementacion
         }
         public int Update(Caso t)
         {
-            query = @"UPDATE Caso SET nro = @nro, descripcion = @descripcion, imagen = @imagen, audio = @audio, estadoCaso = @estadoCaso, fechaInicio = @fechaInicio, fechaCierre = @fechaCierre, fechaReapertura = @fechaReapertura, idDenunciante = @idDenunciante, idSupervisor = @idSupervisor
+            query = @"UPDATE Caso SET nro = @nro, descripcion = @descripcion, imagen = @imagen, audio = @audio, estadoCaso = @estadoCaso, fechaCierre = @fechaCierre, fechaReapertura = @fechaReapertura, idDenunciante = @idDenunciante, idSupervisor = @idSupervisor
                     WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@nro", t.NumeroCaso);
             command.Parameters.AddWithValue("@descripcion", t.Descripcion);
             command.Parameters.AddWithValue("@imagen", t.Imagen);
             command.Parameters.AddWithValue("@audio", t.Audio);
-            command.Parameters.AddWithValue("@estadoCaso", t.EstadoCaso);
-            command.Parameters.AddWithValue("@fechaInicio", t.FechaInicio );
+            command.Parameters.AddWithValue("@estadoCaso", t.EstadoCaso);    
             command.Parameters.AddWithValue("@fechaCierre", t.FechaCierre);
             command.Parameters.AddWithValue("@fechaReapertura", t.FechaReapertura);
             command.Parameters.AddWithValue("@idDenunciante", t.IdDenunciante);
@@ -156,6 +158,22 @@ namespace MiAmigaDAO.Implementacion
                 throw ex;
             }
 
+        }
+        public int UpdateEstado(Caso t)
+        {
+            query = @"UPDATE Caso SET estadoCaso = 'Cerrado'
+                    WHERE id = @id";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@estadoCaso", t.EstadoCaso);
+            try
+            {
+                return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }
