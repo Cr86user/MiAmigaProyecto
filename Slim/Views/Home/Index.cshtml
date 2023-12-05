@@ -1,0 +1,544 @@
+﻿@{
+    ViewBag.Title = "Mi Amiga";
+    Layout = null; // Assuming you don't want a layout page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/Estilos.css">
+    <link rel="stylesheet" href="~/css/normalize.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+            integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Mi Amiga</title>
+
+    <link rel="icon" href="/imageneshop/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand me-4 text-warning" href="#">
+                            <img src="~/imageneshop/logo.png" alt="" width="35" class="d-inline-block align-text-top ">
+                            Mi Amiga
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#infor">Informe</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#novedad">Novedades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#contac">Contactanos</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <button type="button" class="btn btn-outline-light me-3" onclick="abrirProyecto2()">
+                                    Iniciar sesión
+                                </button>
+                                <button type="button" class="btn btn-outline-light me-3" onclick="abrirRegistrarProyecto2()">
+                                    Registrar Usuario
+                                </button>
+                            </form>
+                            <script>
+                                function abrirProyecto2() {
+                                    window.location.href = 'http://localhost:63132/WebLogin.aspx'; // Reemplaza 'puerto' con el puerto adecuado de tu segundo proyecto
+                                }
+                                function abrirRegistrarProyecto2() {
+                                    window.location.href = 'http://localhost:63132/RegistrarUsuario.aspx'; // Reemplaza 'puerto' con el puerto adecuado de tu segundo proyecto
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="carrusel">
+            <div class="posicion">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/imageneshop/carru1.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block textcor">
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/imageneshop/carru2.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block textcor">
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/imageneshop/carru3.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block textcor">
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/imageneshop/carru4.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block textcor">
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <dir class="espapcio">
+            <div class="corte3">
+            </div>
+            <div class="avisos novograd" id="infor">
+
+                <br><br>
+                <h2>Informe del mes</h2>
+                <h4>...Slim es una institucion de ayuda contra la violencia...</h4>
+                <br><br>
+            </div>
+        </dir>
+
+
+        <div class="promo">
+            <div class="cartones">
+                <div class="card cartonc border-0 colorr" style="width: 18rem;">
+                    <img src="~/imageneshop/logo.png" class="card-img-top circular" alt="...">
+                    <div class="card-body text-center">
+                        <p class="card-text text-light"><b>Logo</b> <br> Logo</p>
+                        <br><br>
+                    </div>
+
+                </div>
+
+                <div class="card cartonc border-0 colorr" style="width: 18rem;">
+                    <img src="~/imageneshop/logo.png" class="card-img-top circular" alt="...">
+                    <div class="card-body text-center">
+                        <p class="card-text text-light"><b>Logo</b> <br>Logo</p>
+                        <br><br>
+                    </div>
+                </div>
+                <div class="card cartonc border-0 colorr" style="width: 18rem;">
+                    <img src="~/imageneshop/logo.png" class="card-img-top circular" alt="...">
+                    <div class="card-body text-center">
+                        <p class="card-text text-light"><b>Logo</b> <br>Logo</p>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="corte1">
+
+        </div>
+
+        </div>
+
+
+
+
+        <!-- boton invisible -->
+        <button class=" canvabot" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop">
+            canva
+        </button>
+
+        <br><br><br><br>
+        <div class="avisos" id="novedad">
+            <br><br>
+            <h2>Novedades</h2>
+            <h4>...Informe de nuestas publicidades y campañas...</h4>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="geleriap">
+            <div class="cartas cor1">
+                <div class="espap">
+
+                </div>
+                <div class="sg col-md-11 col-lg-11 col-sm-11">
+                    <br>
+                    <div class="card text-center" style="width: 99.5%;">
+                        <img src="~/imageneshop/slim2.jpg" class="card-img-top" alt="cocha1">
+                        <div class="card-body">
+                            <h5 class="card-title">MI AMIGA </h5>
+                            <p class="card-text">SLIM</p>
+
+                            <p>
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                                    Ver Mas...
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample1">
+                                <div class="card card-body espacio1 text-start">
+                                    <b>INFORME</b>
+                                    Nuestros servicios del SLIM buscan igualdad de posibilidades y protección de los derechos de las mujeres.
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <br>
+
+                </div>
+                <div class="espap">
+                </div>
+            </div>
+
+            <div class="cartas cor2">
+                <div class="espap">
+
+                </div>
+                <div class="sg col-md-11 col-lg-11 col-sm-11 ">
+                    <br>
+                    <div class="card text-center" style="width: 99.5%;">
+                        <img src="~/imageneshop/slim3.jpg" class="card-img-top" alt="cocha1">
+                        <div class="card-body">
+                            <h5 class="card-title">MI AMIGA </h5>
+                            <p class="card-text">SLIM</p>
+
+                            <p>
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                    Ver Mas...
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample2">
+                                <div class="card card-body espacio2 text-start">
+                                    <b>INFORME</b>
+                                    Nuestros servicios del SLIM buscan igualdad de posibilidades y protección de los derechos de las mujeres.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="espap">
+
+                </div>
+
+            </div>
+            <div class="cartas cor3">
+                <div class="espap">
+
+                </div>
+                <div class="sg col-md-11 col-lg-11 col-sm-11">
+                    <br>
+                    <div class="card text-center" style="width: 99.5%;">
+                        <img src="~/imageneshop/slim4.jpg" class="card-img-top" alt="cocha1">
+                        <div class="card-body">
+                            <h5 class="card-title">MI AMIGA </h5>
+                            <p class="card-text">SLIM</p>
+
+                            <p>
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                                    Ver Mas...
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample3">
+                                <div class="card card-body espacio3 text-start">
+                                    <b>INFORME</b>
+                                    Nuestros servicios del SLIM buscan igualdad de posibilidades y protección de los derechos de las mujeres.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="espap">
+                </div>
+            </div>
+            <div class="cartas cor1">
+                <div class="espap">
+
+                </div>
+                <div class="sg col-md-11 col-lg-11 col-sm-11">
+                    <br>
+                    <div class="card text-center" style="width: 99.5%;">
+                        <img src="~/imageneshop/slim6.jpg" class="card-img-top" alt="cocha1">
+                        <div class="card-body">
+                            <h5 class="card-title">MI AMIGA </h5>
+                            <p class="card-text">SLIM</p>
+
+                            <p>
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                                    Ver Mas...
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample4">
+                                <div class="card card-body espacio1 text-start">
+                                    <b>INFORME</b>
+                                    Nuestros servicios del SLIM buscan igualdad de posibilidades y protección de los derechos de las mujeres.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="espap">
+                </div>
+            </div>
+            <div class="cartas cor2">
+                <div class="espap">
+
+                </div>
+                <div class="sg col-md-11 col-lg-11 col-sm-11">
+                    <br>
+                    <div class="card text-center" style="width: 99.5%;">
+                        <img src="~/imageneshop/slim5.jpg" class="card-img-top" alt="cocha1">
+                        <div class="card-body">
+                            <h5 class="card-title">MI AMIGA </h5>
+                            <p class="card-text">SLIM</p>
+
+                            <p>
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                    Ver Mas...
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample5">
+                                <div class="card card-body espacio2 text-start">
+                                    <b>INFORME</b>
+                                    Nuestros servicios del SLIM buscan igualdad de posibilidades y protección de los derechos de las mujeres.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="espap ">
+                </div>
+            </div>
+
+
+            <div class="cartas cor3">
+                <div class="espap">
+
+                </div>
+                <div class="sg col-md-11 col-lg-11 col-sm-11">
+                    <br>
+                    <div class="card text-center" style="width: 99.5%;">
+                        <img src="~/imageneshop/slim2.jpg" class="card-img-top" alt="cocha1">
+                        <div class="card-body">
+                            <h5 class="card-title">MI AMIGA </h5>
+                            <p class="card-text">SLIM</p>
+
+                            <p>
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6">
+                                    Ver Mas...
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample6">
+                                <div class="card card-body espacio3 text-start">
+                                    <b>INFORME</b>
+                                    Nuestros servicios del SLIM buscan igualdad de posibilidades y protección de los derechos de las mujeres.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="espap">
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+    <br><br><br>
+
+
+    <aside>
+        <div class="corte3">
+
+        </div>
+
+        <div class="avisos novograd" id="contac">
+            <br><br><br>
+            <h2>Contactanos</h2>
+            <h4>...Revisa la siguiente información...</h4>
+            <br><br><br><br><br><br>
+        </div>
+        <div class="contac pos0">
+            <div class="espacio neoncont1">
+                <div class="col-sm-12 col-lg-12">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body">
+                            <h5 class="card-title neon1">Contacto</h5>
+                            <p class="card-text">
+                                ¿Te gustó algunos de estos lugares? <br>
+                                Entoces contactate con nosotros para planear tu siguiente viaje.
+                            </p>
+
+                            <p>
+                                <button class="btn btn-outline-light botcol1" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample16" aria-expanded="false" aria-controls="collapseExample16">
+                                    números disponibles
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample16">
+                                <div class="card card-body espaciocop1">
+                                    Tel:71238932<br>
+                                    Tel:76535220<br>
+                                    Cel:4989674
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contac pos1">
+            <div class="espacio neoncont2">
+                <div class="col-sm-12 col-lg-12">
+                    <div class="card text-center bg-dark text-light">
+                        <div class="card-body">
+                            <h5 class="card-title neon2">Ubicación</h5>
+                            <p class="card-text">Dirijite a cualquiera de nuestras oficinas si quieres saber mas.</p>
+
+                            <p>
+                                <button class="btn btn-outline-light botcol2" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample17" aria-expanded="false" aria-controls="collapseExample17">
+                                    ver oficinas
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample17">
+                                <div class="card card-body espaciocop2">
+                                    Central: Av. America y Potosí <br>
+                                    Sucursal 1: Av. Aroma y Heroinas <br>
+                                    Sucursal 2: Av. America y Libertador
+                                </div>
+                                <d /iv>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contac pos2">
+                <div class="espacio neoncont3">
+                    <div class="col-sm-12 col-lg-12">
+                        <div class="card text-end bg-dark text-light">
+                            <div class="card-body">
+                                <h5 class="card-title neon3">Ayuda</h5>
+                                <p class="card-text">
+                                    Ocurrio algun error o detecto algun problema decribe tu problema a los siguientes
+                                    correos.
+                                </p>
+
+                                <p>
+                                    <button class="btn btn-outline-light botcol3" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample18" aria-expanded="false" aria-controls="collapseExample18">
+                                        Recibe ayuda
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapseExample18">
+                                    <div class="card card-body espaciocop3">
+                                        Correo1@gmail.com <br>
+                                        Correo2@gmail.com <br>
+                                        Correo3@gmail.com
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dir class="fotespac">
+            </dir>
+
+    </aside>
+
+    <footer>
+        <div class="contfot">
+            <div class="fotlist">
+                <h4>Contenido</h4>
+                <ul>
+                    <li><a href="#infor" class="hob2">Informe</a></li>
+                    <li><a href="#novedad" class="hob2">Novedades</a></li>
+                    <li><a href="#contac" class="hob2">Contactos</a></li>
+                </ul>
+
+            </div>
+            <div class="fotlist">
+                <h4>Espacio para Lista</h4>
+                <ul>
+                    <li><a href="#" class="hob2">Contacto</a></li>
+                    <li><a href="#" class="hob2">Ubicacion</a></li>
+                    <li><a href="#" class="hob2">Ayuda</a></li>
+                </ul>
+
+            </div>
+            <div class="fotlist">
+                <h4>Redes Sociales</h4>
+                <a href="#"><i class="icono cop0 fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="icono cop1 fa-brands fa-amazon"></i></a>
+                <a href="#"><i class="icono cop2 fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="icono cop3 fa-brands fa-youtube"></i></a>
+
+
+            </div>
+        </div>
+        <div class="autor">
+            <br><br>
+            <h5>© AdAr 2023 / Mi Amiga-Slim</h5>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="javascrip/simplyCountdown.min.js"></script>
+    <script src="javascrip/contador.js"></script>
+</body>
+
+</html>

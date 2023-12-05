@@ -1,0 +1,505 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ....................header...................... */
+header {
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+
+/* ....................main...................... */
+main {
+    width: 100%;
+}
+
+.carrusel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.textcor {
+    text-shadow: 0 0 5px #000000, 0 0 30px #000000, 0 0 30px #000000;
+}
+
+.posicion {
+    width: 80%;
+}
+/*...avisos que se usan en cada seccion...*/
+.avisos {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+/*.....apartado de promociones.....*/
+.promo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: #474747;
+}
+
+.cartones {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.circular {
+    border-radius: 100%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #fe9813, 0 0 0.8rem #fe9813, 0 0 2.8rem #fe9813, inset 0 0 1.3rem #fe9813;
+}
+
+.colorr {
+    background: #474747;
+}
+/*.....apartado para el contador.....*/
+.espacont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.cuenta {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+/*contador estilos*/
+.simply-section {
+    background: #474747;
+    width: 155px;
+    height: 155px;
+    margin: 0 18px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 1rem #13cffe, 0 0 0.8rem #13cffe, 0 0 1.8rem #13cffe, inset 0 0 1.3rem #13cffe;
+}
+
+.simply-amount {
+    color: #fff;
+    display: block;
+    font-size: 38px;
+}
+
+.simply-word {
+    color: #fff;
+    font-size: 15px;
+}
+/*boton invisible*/
+.canvabot {
+    visibility: hidden;
+}
+/*.....apartado de galeria.....*/
+.geleriap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cartas {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.espap {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: #fff;
+}
+
+/*..color de fondo detras las cards..*/
+.cor1 {
+    background: #FF6464;
+}
+
+.cor2 {
+    background: #FF8264;
+}
+
+.cor3 {
+    background: #FFAA64;
+}
+/*..color info dentro del cards..*/
+.espacio1 {
+    background-color: #ff6464a1;
+}
+
+.espacio2 {
+    background-color: #FF8264a1;
+}
+
+.espacio3 {
+    background-color: #FFAA64a1;
+}
+
+
+/* ....................aside...................... */
+aside {
+    width: 100%;
+    background: #474747;
+}
+
+.corte1 {
+    content: '';
+    width: 100%;
+    height: 90px;
+    background: #474747;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 45%);
+}
+
+.corte2 {
+    content: '';
+    width: 100%;
+    height: 90px;
+    background: #474747;
+    clip-path: polygon(0 0, 100% 45%, 100% 100%, 0 55%);
+}
+
+.corte3 {
+    content: '';
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 55%);
+}
+
+.fotespac {
+    content: '';
+    width: 100%;
+    height: 90px;
+}
+
+.novograd {
+    background: #474747;
+    color: #fff;
+}
+
+.espapcio {
+    background: #474747;
+}
+/*.....seccion de contacto.....*/
+.contac {
+    width: 100%;
+}
+
+.espacio {
+    width: 33.33%;
+}
+
+.neoncont1 {
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #13cffe, 0 0 2.8rem #13cffe, inset 0 0 1.3rem #13cffe;
+}
+
+.neoncont2 {
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.neoncont3 {
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #fe9013, 0 0 0.8rem #fe9013, 0 0 2.8rem #fe9013, inset 0 0 1.3rem #fe9013;
+}
+
+.pos0 {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.pos1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pos2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.espaciocop1 {
+    background-color: #39c7d1be;
+}
+
+.espaciocop2 {
+    background-color: #db3ea7be;
+}
+
+.espaciocop3 {
+    background-color: #fc9d10be;
+}
+
+.botcol1 {
+    background-color: #13cffe;
+}
+
+.botcol2 {
+    background-color: #bc13fe;
+}
+
+.botcol3 {
+    background-color: #fe9013;
+}
+
+.botcol1:hover {
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #13cffe, 0 0 0.8rem #13cffe, 0 0 2.8rem #13cffe, inset 0 0 1.3rem #13cffe;
+}
+
+.botcol2:hover {
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.botcol3:hover {
+    border: 3px solid #fff;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #fe9013, 0 0 0.8rem #fe9013, 0 0 2.8rem #fe9013, inset 0 0 1.3rem #fe9013;
+}
+/* ....................footer...................... */
+footer {
+    width: 100%;
+    padding: 40px 0;
+    background: #1b1b1b;
+    color: rgb(255, 255, 255);
+}
+/*.....espacio el del footer.....*/
+.fotlist {
+    width: 33.3%;
+    text-align: center;
+}
+
+.neon1 {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 16px #fff, 0 0 30px #13cffe, 0 0 40px #13cffe, 0 0 60px #13cffe, 0 0 80px #13cffe, 0 0 90px #13cffe;
+}
+
+.neon2 {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 16px #fff, 0 0 30px #bc13fe, 0 0 40px #bc13fe, 0 0 60px #bc13fe, 0 0 80px #bc13fe, 0 0 90px #bc13fe;
+}
+
+.neon3 {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 4px #e6e4e4, 0 0 11px #e6e4e4, 0 0 16px #e6e4e4, 0 0 30px #fe9013, 0 0 40px #fe9013, 0 0 60px #fe9013, 0 0 80px #fe9013, 0 0 90px #fe9013;
+}
+
+.fotlist h4 {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 4px #e6e4e4, 0 0 11px #e6e4e4, 0 0 16px #e6e4e4, 0 0 30px #bc13fe, 0 0 40px #bc13fe, 0 0 60px #bc13fe, 0 0 80px #bc13fe, 0 0 90px #bc13fe;
+}
+
+.fotlist ul {
+    list-style-type: none;
+}
+
+.fotlist a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+    .fotlist a:hover {
+        color: #cb92f1;
+        font-size: 25px;
+        transition: all ease 0.3s;
+        transform: scale(1.1) translateY(-5px);
+    }
+
+.contfot {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icono {
+    font-size: 35px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.fotlist a .cop0 :hover {
+    color: rgb(41, 143, 226);
+    font-size: 43px;
+    transition: all ease 0.2s;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.fotlist a .cop1 :hover {
+    color: #ffd23d;
+    font-size: 43px;
+    transition: all ease 0.2s;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.fotlist a .cop2 :hover {
+    color: #48b3f5;
+    font-size: 43px;
+    transition: all ease 0.2s;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.fotlist a .cop3 :hover {
+    color: #ff2222;
+    font-size: 43px;
+    transition: all ease 0.2s;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.autor {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/* ....................Mediaquerys...................... */
+@media screen and (max-width: 768px) {
+    /*promacion*/
+    .posicion {
+        width: 100%;
+    }
+
+    .promo {
+        padding: 10px 0;
+    }
+
+    .cartones {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    /*contador*/
+    .cuenta {
+        width: 100%;
+    }
+
+    .simply-section {
+        width: 140px;
+        height: 140px;
+    }
+
+    .simply-amount {
+        display: block;
+        font-size: 30px;
+    }
+
+    .simply-word {
+        font-size: 15px;
+    }
+
+    /*galeria*/
+    .cartas {
+        width: 48%;
+    }
+    /*aside*/
+    .espacio {
+        width: 50%;
+    }
+
+    .pos1 {
+        justify-content: flex-end;
+    }
+
+    .pos2 {
+        justify-content: flex-start;
+    }
+    /*footer*/
+    .fotlist {
+        width: 50%;
+        text-align: center;
+    }
+
+    .contfot {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+
+    /*contador*/
+
+    .simply-section {
+        width: 140px;
+        height: 140px;
+    }
+
+    .simply-section {
+        width: 90px;
+        height: 90px;
+        margin: 0 6px;
+    }
+
+    .simply-amount {
+        display: block;
+        font-size: 25px;
+    }
+
+    .simply-word {
+        font-size: 15px;
+    }
+
+    /*galeria*/
+    .cartas {
+        width: 90%;
+    }
+
+    /*aside*/
+    .espacio {
+        width: 80%;
+    }
+
+    .pos0 {
+        justify-content: flex-end;
+    }
+
+    .pos1 {
+        justify-content: flex-start;
+    }
+
+    .pos2 {
+        justify-content: flex-end;
+    }
+
+    /*footer*/
+    .fotlist {
+        width: 100%;
+    }
+
+    .contfot {
+        justify-content: center;
+    }
+
+    .autor h5 {
+        font-size: 15px;
+    }
+}

@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		MiAmigaWeb\css\normalize.css = MiAmigaWeb\css\normalize.css
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slim", "..\Slim\Slim.csproj", "{99DBA4B9-122A-4416-8DF3-037B539F4478}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slim", "Slim\Slim.csproj", "{99DBA4B9-122A-4416-8DF3-037B539F4478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
