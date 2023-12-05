@@ -1,10 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteSupervisor.Master" AutoEventWireup="true" CodeBehind="WebSupervisor.aspx.cs" Inherits="MiAmigaWeb.WebSupervisor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteSupervisor.Master" AutoEventWireup="true" CodeBehind="CrudSupervisor.aspx.cs" Inherits="MiAmigaWeb.WebSupervisor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
         <section class="conter-header">
             <h1 style="text-align:center">Registro de Supervisores</h1>
+            
         </section>
         <section>
             <div class="row">
@@ -94,12 +95,10 @@
                 </div>
             </div>
              <!--Datagrid-->
-                        <div class="col-md-9">
-                            <div class="datagrid-container">
+                        <div class="col-md-10">                     
                                 <div class="box-body">
                                     <asp:GridView ID="gridData" runat="server" CssClass="gridview table table-bordered table-striped dataTable dtr-inline collapsed" />
-                                </div>
-                            </div>
+                                </div>                        
                         </div>
                         <!--DatagridFin-->
         </section>

@@ -1,0 +1,43 @@
+/* Estilos personalizados para toda la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Estilos para el encabezado */
+.conter-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Estilos para los formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-box {
+    width: 100%;
+    padding: 8px;
+}
+
+/* Estilos para botones */
+.btn-insert {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+/* Estilos para la tabla GridView */
+.gridview {
+    margin-top: 20px;
+}

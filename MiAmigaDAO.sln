@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAmigaDAO", "MiAmigaDAO\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAmigaWeb", "MiAmigaWeb\MiAmigaWeb.csproj", "{8595547C-5306-41CF-BB01-5071255701A6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{5775EC65-11A0-41C3-9AD6-122AE3782E28}"
+	ProjectSection(SolutionItems) = preProject
+		MiAmigaWeb\css\Estilos.css = MiAmigaWeb\css\Estilos.css
+		MiAmigaWeb\css\normalize.css = MiAmigaWeb\css\normalize.css
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slim", "..\Slim\Slim.csproj", "{99DBA4B9-122A-4416-8DF3-037B539F4478}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +29,10 @@ Global
 		{8595547C-5306-41CF-BB01-5071255701A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8595547C-5306-41CF-BB01-5071255701A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8595547C-5306-41CF-BB01-5071255701A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DBA4B9-122A-4416-8DF3-037B539F4478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DBA4B9-122A-4416-8DF3-037B539F4478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DBA4B9-122A-4416-8DF3-037B539F4478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DBA4B9-122A-4416-8DF3-037B539F4478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

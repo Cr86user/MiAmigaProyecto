@@ -10,7 +10,7 @@ namespace MiAmigaDAO.Model
     {
      
 
-        public byte Id { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
@@ -20,7 +20,7 @@ namespace MiAmigaDAO.Model
         public char Genero { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public byte Imagen { get; set; }
-        public Persona(byte id, string nombre, string primerApellido, string segundoApellido, string ci, string direccion, string telefono, char genero, DateTime fechaNacimiento, byte imagen,byte estado, DateTime fechaRegistro, DateTime fechaActualizacion)
+        public Persona(int id, string nombre, string primerApellido, string segundoApellido, string ci, string direccion, string telefono, char genero, DateTime fechaNacimiento, byte imagen,byte estado, DateTime fechaRegistro, DateTime fechaActualizacion)
             :base(estado,fechaRegistro,fechaActualizacion)
         {
             Id = id;

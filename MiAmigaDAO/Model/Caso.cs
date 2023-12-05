@@ -10,26 +10,26 @@ namespace MiAmigaDAO.Model
     {
        
 
-        public byte Id { get; set; }
+        public int Id { get; set; }
         public int NumeroCaso { get; set; }
         public string Descripcion { get; set; }
         public byte[] Imagen { get; set; }
-        public byte[] Audio { get; set; }
+        public string Latitud {  get; set; }
+        public string Longitud { get; set; }
         public string EstadoCaso { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaCierre { get; set; }
         public DateTime FechaReapertura { get; set; } 
-        public byte IdDenunciante { get; set; }
-        public byte IdSupervisor { get; set; }
+        public int IdDenunciante { get; set; }
+        public int IdSupervisor { get; set; }
 
-        public Caso(byte id, int numeroCaso, string descripcion, byte[] imagen, byte[] audio, string estadoCaso, DateTime fechaInicio, DateTime fechaCierre, DateTime fechaReapertura, byte idDenunciante, byte idSupervisor, DateTime fechaRegistro, DateTime fechaActualizacion, byte estado)
+        public Caso(int id, int numeroCaso, string descripcion, byte[] imagen, string estadoCaso, DateTime fechaInicio, DateTime fechaCierre, DateTime fechaReapertura, int idDenunciante, int idSupervisor, DateTime fechaRegistro, DateTime fechaActualizacion, byte estado)
             : base(estado, fechaRegistro, fechaActualizacion)
         {
             Id = id;
             NumeroCaso = numeroCaso;
             Descripcion = descripcion;
             Imagen = imagen;
-            Audio = audio;
             EstadoCaso = estadoCaso;
             FechaInicio = fechaInicio;
             FechaCierre = fechaCierre;
@@ -38,12 +38,11 @@ namespace MiAmigaDAO.Model
             IdSupervisor = idSupervisor;
         }
 
-        public Caso(int numeroCaso, string descripcion, byte[] imagen, byte[] audio, string estadoCaso, DateTime fechaInicio, DateTime fechaCierre, DateTime fechaReapertura, byte idDenunciante, byte idSupervisor)
+        public Caso(int numeroCaso, string descripcion, byte[] imagen, string estadoCaso, DateTime fechaInicio, DateTime fechaCierre, DateTime fechaReapertura, int idDenunciante, int idSupervisor)
         {
             NumeroCaso = numeroCaso;
             Descripcion = descripcion;
-            Imagen = imagen;
-            Audio = audio;
+            Imagen = imagen;           
             EstadoCaso = estadoCaso;
             FechaInicio = fechaInicio;
             FechaCierre = fechaCierre;
@@ -51,12 +50,29 @@ namespace MiAmigaDAO.Model
             IdDenunciante = idDenunciante;
             IdSupervisor = idSupervisor;
         }
-        public Caso(int numeroCaso, string descripcion, byte[] imagen, byte[] audio)
+        public Caso(int numeroCaso, string descripcion, byte[] imagen,string latitud,string longitud,int idDenunciante)
         {
             NumeroCaso = numeroCaso;
             Descripcion = descripcion;
             Imagen = imagen;
-            Audio = audio;                             
+            Latitud = latitud;
+            Longitud = longitud;                  
+            IdDenunciante = idDenunciante;
+        }
+        public Caso(int id, int idSupervisor)
+        {
+            Id = id;
+            IdSupervisor = idSupervisor;
+        }
+        public Caso(int idSupervisor) 
+        {
+            IdSupervisor = idSupervisor;
+        }
+        public Caso(int id, string latitud, string longitud)
+        {
+            Id = id;
+            Latitud = latitud;
+            Longitud = longitud;
         }
     }
 }

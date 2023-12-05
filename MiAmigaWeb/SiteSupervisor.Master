@@ -4,15 +4,133 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <!-- Estilos de Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Estilos CSS Personalizados -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-</head>
-<body>
     
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-       
+    
+    <style>
+        /* Estilos para el Sidebar */
+        #sidebar {
+            position: fixed;
+            height: 100%;
+            width: 250px;
+            top: 0;
+            left: -250px;
+            z-index: 1;
+            padding-top: 20px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            transition: left 0.3s ease;
+        }
+
+        #sidebar.show {
+            left: 0;
+            transition: left 0.3s ease;
+        }
+
+        #sidebar ul.nav flex-column {
+            padding-left: 0;
+        }
+
+        #sidebar .nav-link {
+            color: #495057;
+        }
+
+        #sidebar .nav-link.active {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Estilos para el botón de cerrar el Sidebar */
+        #closeSidebarBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Estilos para el Navbar */
+        #customNavbar {
+            background-color: #ac3db5; /* Color del Navbar */
+            color: #fff; /* Color del texto del Navbar */
+            padding: 10px; /* Espaciado interno del Navbar */
+        }
+         .body{
+     background-color: rgba(255, 192, 203, 0.7); /* Color rosa en formato RGBA */
+ }
+    </style>   
+</head>
+<body>  
+        <nav class="navbar navbar-expand-lg navbar-dark" id="customNavbar">
+        <!-- Botón para mostrar/ocultar el Sidebar -->
+        <button class="btn btn-Warning" id="sidebarToggleBtn">Menu de Opciones</button>      
+        </nav>
+            
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                    <div class="position-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="opcion1Link">
+                                    Cerrar barra de Navegacion
+                                </a>
+                            </li>
+                             <li class="nav-item">
+                                  <a class="nav-link" href='<%= "/Supervisor/WebVerCasosSupervisor.aspx?id=" + Session["id"] %>'>Tus casos</a>
+                              </li>                                                                                
+                             <li class="nav-item">
+                             <a class="nav-link" onclick="cerrarSecion()">
+                                    Cerrar Sesion
+                                </a>
+                         </li>
+                        </ul>
+                    </div>
+                </nav>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                <!-- Contenido Principal -->
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <!-- Contenido de la página -->
+                </main>
+            </div>
+        </div>
+
+        <!-- Scripts de Bootstrap y jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- Script para manejar el toggle del sidebar y cerrar el sidebar -->
+        <script>
+            function cerrarSecion() {
+                window.location.href = 'https://localhost:44339/Home/Index';
+            }
+            $(document).ready(function () {
+                $("#sidebarToggleBtn").click(function () {
+                    $("#sidebar").toggleClass("show");
+                });
+
+                // Cerrar el sidebar cuando se hace clic en el botón de cerrar
+                $("#closeSidebarBtn").click(function () {
+                    $("#sidebar").removeClass("show");
+                });
+
+                // Ocultar el sidebar cuando se hace clic en la "Opción 1"
+                $("#opcion1Link").click(function () {
+                    $("#sidebar").removeClass("show");
+                });
+            });
+        </script>
+    
 </body>
 </html>

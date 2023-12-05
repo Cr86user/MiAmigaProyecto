@@ -20,10 +20,25 @@ namespace MiAmigaDAO.Implementacion
         {
             throw new NotImplementedException();
         }
-        public DataTable Login(string username, string password)
+        public DataTable Login(string nombreUsuario, string contrasenia)
         {
-            throw new NotImplementedException();
-        }
+            query = @"SELECT idPersona,nombreUsuario,rol
+                    FROM Usuario
+                    WHERE estado = 1 AND nombreUsuario = @nombreUsuario
+                    AND contrasenia = HASHBYTES('MD5',@contrasenia)";
+			SqlCommand command = CreateBasicCommand(query);
+			command.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+			command.Parameters.AddWithValue("@contrasenia", contrasenia).SqlDbType = SqlDbType.VarChar;
+			try
+			{
+				return ExecuteDataTableCommand(command);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+		}
 
         public DataTable Select()
         {

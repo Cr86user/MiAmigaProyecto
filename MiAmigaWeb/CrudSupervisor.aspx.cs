@@ -47,8 +47,7 @@ namespace MiAmigaWeb
         }
         void Select()
         {
-            try
-            {
+            
                 implSupervisor = new SupervisorImpl();
                 DataTable dt = implSupervisor.Select();
 
@@ -57,7 +56,7 @@ namespace MiAmigaWeb
                 table.Columns.Add("Nombre", typeof(string));
                 table.Columns.Add("Primer Apellido", typeof(string));
                 table.Columns.Add("Segundo Apellido", typeof(string));
-                table.Columns.Add("Carnet de Identidad", typeof(string));
+                table.Columns.Add("CI", typeof(string));
                 table.Columns.Add("Direccion", typeof(string));
                 table.Columns.Add("Telefono", typeof(string));
                 table.Columns.Add("Genero", typeof(string));
@@ -80,18 +79,15 @@ namespace MiAmigaWeb
                 for (int i = 0; i < gridData.Rows.Count; i++)
                 {
                     string id = dt.Rows[i][0].ToString();
-                    string up = " <a class='btn btn-sm btn-info' href='UpdateCustomer.aspx?id=" + id + "&type=U'> <i class='fas fa-edit' style='color:#000000;'> </i>  </a> ";
-                    string del = " <a class='btn btn-sm btn-danger' href='webAdminCustomers.aspx?id=" + id + "&type=D' onclick='return ConfirmDelete();> <i class='fas fa-trash' style='background:#FF0000;'> </i>  </a>  ";
+				string up = $"<a class='btn btn-sm btn-warning' href='CrudNurse.aspx?id={id}&type=U'> Seleccionar</a>";
+				string del = $"<a class='btn btn-sm btn-danger' href='CrudNurse.aspx?id={id}&type=D' onclick='return ConfirmDelete();'> <i class='fas fa-trash' style='background:#FF0000;'>Eliminar</i></a>";
 
-                    gridData.Rows[i].Cells[15].Text = up;
-                    gridData.Rows[i].Cells[16].Text += del;
+				gridData.Rows[i].Cells[14].Text = up;
+                    gridData.Rows[i].Cells[15].Text += del;
                     gridData.Rows[i].Attributes["data-id"] = id;
                 }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            
+           
         }
         void load()
         {

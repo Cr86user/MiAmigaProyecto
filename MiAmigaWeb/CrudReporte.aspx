@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteSupervisor.Master" AutoEventWireup="true" CodeBehind="WebReporte.aspx.cs" Inherits="MiAmigaWeb.WebReporte" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteSupervisor.Master" AutoEventWireup="true" CodeBehind="CrudReporte.aspx.cs" Inherits="MiAmigaWeb.WebReporte" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         /* Estilo para el fondo */
@@ -80,8 +80,7 @@
                     </div>
                 </section>
             </div>
-        </form>
-    </main>
+        </form>    
     <script>
          function ConfirmDelete() {
              return confirm('¿Estás seguro de que deseas eliminar este elemento?');

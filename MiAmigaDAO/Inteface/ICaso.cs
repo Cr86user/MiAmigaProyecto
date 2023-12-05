@@ -9,7 +9,7 @@ namespace MiAmigaDAO.Inteface
 {
     internal interface ICaso: IBase<Caso>
     {
-        Caso Get(byte id);
+        Caso Get(int id);
         void GetDate();
     }
 }
